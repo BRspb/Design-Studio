@@ -1,0 +1,17 @@
+@import "bourbon"
+
+
+$main: #2F3238
+=main-d($perc: %, $opac: 1) // color main darken
+	color: rgba(darken($main, $perc), $opac)
+=main-l($perc: %, $opac: 1) // color main lighten
+	color: rgba(lighten($main, $perc), $opac)
+
+$accent: #ff4d00
+=accent-d($perc: %, $opac: 1) // color accent darken
+	color: rgba(darken($accent, $perc), $opac)
+=accent-l($perc: %, $opac: 1) // color accent lighten
+	color: rgba(lighten($accent, $perc), $opac)
+
+=tr($time: .4s)  // transition: all .4s	ease
+	transition: all $time	ease
