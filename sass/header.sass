@@ -9,10 +9,47 @@ body
 	font-family: "RobotoRegular", sans-serif
 	overflow-x: hidden
 
+section
+	padding: 100px 0
+	color: $accent2
+	h2
+		font-size: 38px
+		text-align: center
+		margin: 10px 0 20px
+		text-transform: uppercase
+		font-family: "RobotoRegular", sans-serif
+		font-weight: normal
+	p
+		font-family: "RobotoLight", sans-serif
+		font-size: 24px
+		text-align: center
+		margin: 0
+.light
+	background-color: $main
+.dark
+	background:
+		+main-d(6)
+
+.scrollup
+	width: 45px
+	height: 45px
+	position: fixed
+	bottom: 0
+	right: 0
+	background-image: url('../img/arr-up.png')
+	background:
+			+main-d(6)
+	background-size: 40%
+	background-repeat: no-repeat
+	background-position: center
+
+
 .hidden
 	display: none
 	
 .slider-wrap
+	position: relative
+	padding: 0
 	.slider
 		position: relative
 		top: 0
@@ -41,7 +78,7 @@ body
 	.top-header, .logotype
 		position: absolute
 		z-index: 2
-		color: #fff
+		color: $accent2
 	.top-header 
 		font-size: 20px
 		right: 5%
@@ -58,7 +95,7 @@ body
 			margin: 0
 		p
 			font-size: 24px
-			margin: 0
+			margin: -15px 0 0
 	.owl-controls, .owl-prev, .owl-next
 		position: absolute
 		content: ''
@@ -70,7 +107,7 @@ body
 	a
 		display: block
 		content: ''
-		position: relative
+		position: absolute
 		width: 45px
 		height: 45px
 		background:
@@ -86,7 +123,7 @@ body
 			+tr(.3s)
 			background:
 				+main-l(10%)
-	.owl-prev, .owl-next
+	.owl-prev, .owl-next, .scrollup
 		width: 45px
 		background:
 			+main-d(6)
@@ -123,23 +160,36 @@ body
 		display: inline-block
 		border-radius: 50%
 	.owl-dot.active
-		background-color: #FFF
+		background:
+			+main-d(6)
 	
-.sect-work
+.head-mnu
 	.top-mnu
 		height: 60px
 		background:
 			+main-d(6)
-		color: #fff
-		.col-md-3
-			padding: 0
+		color: $accent2
+		.container
+			margin-left: 0
+			width: 100%
 		h2
 			text-transform: uppercase
 			font-size: 20px
+			margin: 13px 0 20px
 		ul
 			list-style-type: none
+			text-align: right
 			li
-				margin-right: 50px
+				margin-right: 40px
+				display: inline-block
+				&:last-child
+					margin-right: 15px
+				a
+					color: $accent2
+					text-transform: uppercase
+					text-decoration: none
+					&:hover
+						color: $accent
 
 
 

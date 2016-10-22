@@ -13,5 +13,11 @@ $accent: #ff4d00
 =accent-l($perc: %, $opac: 1) // color accent lighten
 	color: rgba(lighten($accent, $perc), $opac)
 
+$accent2: #f5f5f5
+=accent-d($perc: %, $opac: 1) // color accent darken
+	color: rgba(darken($accent, $perc), $opac)
+=accent-l($perc: %, $opac: 1) // color accent lighten
+	color: rgba(lighten($accent, $perc), $opac)
+
 =tr($time: .4s)  // transition: all .4s	ease
 	transition: all $time	ease

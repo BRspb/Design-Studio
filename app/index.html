@@ -28,9 +28,10 @@
 	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
 
 	<!-- Load CSS Start -->
-	<script>loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );</script>
+	<script>loadLocalStorageCSS( "webfonts");</script>
 	<script>loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );</script>
 	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+	<script>loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" );</script>
 	<!-- Load CSS End -->
 
 	<!-- Load CSS Compiled without JS -->
@@ -42,10 +43,10 @@
 </head>
 
 <body>
-
+	<a href="#home" class="scrollup"></a>
 	<header>
-		<section class="slider-wrap">
-			<a href="#" class="btn-down"></a>
+		<section class="slider-wrap" id="home">
+			<a href="#br" class="btn-down"></a>
 			<div class="top-header">
 				<div class="top_adr">Москва</div>
 				<div class="top_phone">+7(999)999-99-99</div>										
@@ -70,31 +71,86 @@
 			</div>
 		</section>
 	</header>
-	<section class="sect-work light">
-		
+
+	<div class="head-mnu">
 		<div class="top-mnu">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-sm-2 col-md-2 col-lg-2">
 						<h2>future</h2>
 					</div>
-					<div class="col-md-offset-3 col-md-6">
+					<div class="col-sm-10 col-md-10 col-lg-10">
 						<ul>
 							<li>
-								<a href="#">главная</a>
-								<a href="#">наши работы</a>
-								<a href="#">о компании</a>
-								<a href="#">контакты</a>
+								<a href="#home">главная</a>								
 							</li>
+							<li>
+								<a href="#">наши работы</a>								
+							</li>
+							<li>
+								<a href="#">о компании</a>								
+							</li>
+							<li>
+								<a href="#">контакты</a>								
+							</li>							
 						</ul>							
 					</div>		
 				</div>
 			</div>					
+		</div>		
+	</div>
+
+	<section class="sect-work light">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Наши работы</h2>
+					<p>выберите ниже раздел с примерами работ</p>
+				</div>
+			</div>
 		</div>
 
-
 	</section>
-
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum illo explicabo architecto aperiam obcaecati magni, ipsam, amet voluptate fuga incidunt temporibus, quos impedit sit totam accusamus vel esse odio voluptatum.</p>
+		<p>Repellat voluptate laboriosam laudantium, et porro sunt dignissimos ex sint enim consectetur culpa! Molestias blanditiis aliquam tempora maxime cumque commodi enim natus necessitatibus minima nisi, mollitia magni, velit ratione, consectetur.</p>
+		<p>Quia maiores temporibus dolorem! Dolores, beatae enim necessitatibus sapiente obcaecati possimus et velit, illo blanditiis at amet nemo suscipit, fugit ullam tempore! Voluptatum repellat voluptatibus inventore. Autem distinctio praesentium vel.</p>
+		<p>Neque quidem reiciendis, recusandae assumenda nam officia, vitae ipsum facere soluta temporibus! Placeat dolores nihil odio iste non, eveniet similique sit perferendis corrupti vero facilis reprehenderit. Nulla accusamus non vero.</p>
+		<p>Facilis possimus dolorem iste! Vel praesentium laborum, ullam quas ipsa explicabo non ducimus reprehenderit, quam, minus porro soluta consequuntur magnam, tenetur velit sint asperiores numquam. Eaque reiciendis voluptatem illo maiores.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum velit rerum eius fugit amet, aliquam praesentium cumque quos consequuntur molestias sed esse. Perspiciatis, omnis, exercitationem.</p>
+		<p>Temporibus optio excepturi doloremque neque molestias accusamus dolorum totam. Nemo ducimus reiciendis deleniti fugiat dicta rem ipsam qui mollitia, recusandae corporis at quos eveniet veniam.</p>
+		<p>Eaque soluta delectus tempore saepe ratione modi omnis reprehenderit, vero rem repellendus, pariatur sit, aliquid. Voluptas cupiditate ipsa corporis, debitis delectus praesentium eos soluta? Iusto.</p>
+		<p>Repudiandae at rerum, a rem odit iste iusto veritatis. Similique tenetur, reprehenderit ratione. Obcaecati, maxime reprehenderit. Quia aliquid, consequatur, autem illum nihil ad sed numquam!</p>
+		<p>Nesciunt ad iusto placeat ducimus impedit nostrum est aperiam ipsum rem repellendus necessitatibus quae temporibus vel, odio totam cum quaerat dolore expedita praesentium quos porro?</p>
+		<p>Id ratione ea quia minus cum illo labore consequuntur impedit et explicabo, officia omnis provident aliquid sequi quae maiores ducimus nulla, doloribus delectus deserunt consectetur!</p>
+		<p>Eum aliquam nemo necessitatibus saepe voluptatibus accusantium suscipit aperiam nulla autem cumque non voluptatem ullam similique consequuntur quaerat eligendi atque, iusto minus perspiciatis placeat sapiente.</p>
+		<p>Sint alias deserunt nemo sapiente fugiat non adipisci voluptatibus ad architecto dolorem, impedit vero rem facere culpa ab aspernatur doloremque nisi tenetur quam aliquid voluptatum?</p>
+		<p>Fugiat earum recusandae, eos cupiditate blanditiis vel quos eveniet alias, suscipit magni! Facere ratione, provident quibusdam, autem inventore magnam tenetur, sint tempora recusandae soluta necessitatibus?</p>
+		<p>Autem ipsum fugit dolores incidunt, quas at hic eveniet maiores officiis minima dolorem minus libero, optio quos doloribus harum ab quae quidem corporis alias impedit.</p>
+		<p>Velit expedita, minus reprehenderit temporibus libero animi perspiciatis quaerat fugiat ad accusamus saepe voluptatem eligendi et quae distinctio itaque quod aspernatur atque voluptatibus! Dolorum, perspiciatis?</p>
+		<p>Totam consectetur asperiores voluptates ad iusto assumenda dolores facilis distinctio eaque tempore eum numquam excepturi maxime minima aspernatur neque placeat voluptate, vel. Vero placeat, delectus!</p>
+		<p>Quam dicta eligendi consequuntur, at minima sunt veniam laboriosam eum, quo voluptatum molestias repudiandae veritatis totam? Magni doloribus impedit harum, quos maxime. Laudantium accusantium, repudiandae!</p>
+		<p>Ea laboriosam magnam exercitationem excepturi incidunt voluptatibus fugit tempore, molestias, ab pariatur dolorum labore quam optio ipsum natus! Qui incidunt aperiam libero asperiores reiciendis repudiandae.</p>
+		<p>Molestias dolores, ab, nisi tempora est nulla maxime suscipit error commodi tempore pariatur quis laudantium ducimus, accusantium minima a placeat. Sint natus consectetur dignissimos commodi!</p>
+		<p>Deserunt nemo commodi dolores ullam accusantium sint harum, omnis, modi iure. Impedit sequi iure nesciunt mollitia dolores, dolor quis veritatis cupiditate! Ipsum magnam labore, nulla?</p>
+		<p>Esse aspernatur saepe, quisquam voluptatum fugiat in voluptate perspiciatis maxime asperiores assumenda praesentium, error nam provident at. At nemo aliquid accusantium qui! Reiciendis, inventore, reprehenderit?</p>
+		<p>Doloremque veniam animi ea at minus, quaerat accusantium, assumenda id qui eligendi sequi nam provident explicabo sunt similique dicta deserunt fugit aspernatur doloribus, alias eaque.</p>
+		<p>Nobis est maiores nesciunt sint necessitatibus fugiat iusto sequi magni error, veritatis, voluptas dolor ullam ratione recusandae dolorum repudiandae, quibusdam harum sit corporis nulla perferendis.</p>
+		<p>Ipsum quae corrupti quam perferendis, possimus odio, reiciendis earum error culpa quo corporis doloremque vel inventore accusantium ab consectetur, repellat iste ad aut vitae magnam.</p>
+	</section>
+	<section>
+		<br id="br">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</section>
 
 	<div class="hidden"></div>
 
